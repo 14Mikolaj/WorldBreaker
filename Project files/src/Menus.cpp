@@ -1,7 +1,7 @@
 #include "Menus.h"
 
 char get_input() {
-    char choice[1];
+    string choice;
     cin >> choice;
     cin.clear();
     system("CLS");
@@ -37,7 +37,7 @@ char Menus::simple_menu(string options) {
 bool Menus::confirm_input(string input) {
     while (true) {
         cout << "You have chosen:\n\n" << input << "\n\nIs this correct?\n\n1-->Yes\n2-->No\n\n-->";
-        char confirm[1];
+        string confirm;
         cin >> confirm;
         cin.clear();
         system("CLS");
@@ -53,7 +53,7 @@ bool Menus::confirm_input(string input) {
 }
 
 bool Menus::confirm_class(char class_choice) {
-    char confirm[1];
+    string confirm;
     while (true) {
         switch(class_choice) {
             case '1':
@@ -168,8 +168,8 @@ string Menus::get_grave() {
 
 string Menus::new_character_name() {
     cout << "Looks like you need a name:\n\n-->";
-    char name[25];
-    scanf(" %[^\n]s",name);
+    string name;
+    getline(cin >> ws, name);
     cin.clear();
     system("CLS");
     if (confirm_input(name)) return name;
@@ -179,7 +179,7 @@ string Menus::new_character_name() {
 string Menus::new_character_class() {
     cout << "What kind of play style suits you the best? (select class)\n\n"
     "1-->Bruiser\n2-->Rogue\n3-->Scholar\n4-->Mage\n\n-->";
-    char choice[1];
+    string choice;
     cin >> choice;
     cin.clear();
     system("CLS");

@@ -6,10 +6,11 @@ World Breaker is a text-based fantasy RPG written in C++ for a university
 project in 2020. It was originally developed for Windows using Code::Blocks
 and MinGW.
 
-This repository preserves the original game code and data. The CMake build
-and GitHub Actions workflow were added for publishing the project. This is
-an early learning project with known bugs and unfinished content, rather
-than a maintained game release.
+This repository contains the original game and data, with a small input-buffer
+fix for current compilers. The CMake build and GitHub Actions workflow were
+added for publishing the project. The unmodified source is preserved in the
+first commit. This is an early learning project with known bugs and unfinished
+content, rather than a maintained game release.
 
 ## Features
 
@@ -39,7 +40,7 @@ Run these commands in PowerShell with MinGW-w64 available:
 ```powershell
 git clone https://github.com/14Mikolaj/WorldBreaker.git
 cd WorldBreaker
-cmake -S . -B build -G Ninja -DCMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=Debug
+cmake -S . -B build -G Ninja -DCMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 cd build/game
 .\WorldBreaker.exe
@@ -50,9 +51,6 @@ directory. Paths are relative to the working directory, not the executable.
 CMake initializes three empty character slots and an empty graveyard on the
 first configure. Reconfiguring preserves existing saves. After editing game
 data, rerun the configure command to refresh the copies in `build/game/lib`.
-
-Use the Debug configuration above. Modern optimization can expose bugs in
-the original menu input code; Release builds are not verified or supported.
 
 The original `Project files/WorldBreaker.cbp` project is also included for
 reference. The CMake build is the documented way to prepare a fresh runtime
@@ -83,11 +81,12 @@ state, duplicate distributions, and personal saves are excluded from Git.
 
 ## Project status
 
-The original source is preserved, including its limitations. Input handling
-uses fixed-size buffers, some menu variables are uninitialized, and combat
-escape contains an explicit destructor call that can cause a crash. The build
-workflow checks compilation and opening the character menu, not a complete
-playthrough. Refactoring and gameplay fixes are left for future work.
+The original menu input buffers could overflow even for a single digit. Those
+buffers and character-name input now use strings. Other limitations remain:
+some menu variables are uninitialized, and combat escape contains an explicit
+destructor call that can cause a crash. The build workflow checks Debug and
+Release compilation and opening the character menu, not a complete playthrough.
+Further refactoring and gameplay fixes are left for future work.
 
 ## License
 

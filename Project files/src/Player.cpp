@@ -382,7 +382,7 @@ void Player::distribute_sp(string level_text) {
                 "2-->CON +1\n"
                 "3-->AGI +1\n"
                 "4-->WIS +1\n\n-->";
-        char input[1];
+        string input;
         cin >> input;
         cin.clear();
         system("CLS");

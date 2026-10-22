@@ -12,12 +12,15 @@ jobs:
   build:
     runs-on: windows-2025
     timeout-minutes: 10
+    strategy:
+      matrix:
+        build_type: [Debug, Release]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
       - name: Configure with MinGW-w64
-        run: cmake -S . -B build -G Ninja -DCMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=Debug
+        run: cmake -S . -B build -G Ninja -DCMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
       - name: Build
         run: cmake --build build
       - name: Check fresh character slots and exit
