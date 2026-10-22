@@ -1,0 +1,32 @@
+1800
+NPC
+High Archbishom Gjon
+DIALOGUE
+"What is this place?"
+"Shhh, the Emperor isn't expecting visitors: You should leave."
+DIALOGUE
+"The Emperor? He can't be that tough."
+"Are you joking? Go before he gets annoyed."
+ENEMY
+The Emperor
+1800
+DROP
+Otherealm Chest
+0.3
+DROP
+Otherealm Helm
+0.3
+DROP
+Otherealm Gloves
+0.3
+DROP
+Otherealm Legs
+0.3
+DROP
+Otherealm's Titan Sword
+0.3
+DROP
+Orb of Creation
+0.004
+LOCATION
+Darkin Realm

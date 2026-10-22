@@ -1,0 +1,127 @@
+80
+NPC
+Huds Son
+DIALOGUE
+Ask about the Lords House.
+"This house has been the staying place of most Lords for the past hundreds of years, It's a museum now for all to explore.
+DIALOUGE
+"What's your name?"
+"I don't know. My father, Huds, thought it would be funny just to name me his son."
+NPC
+Ominous Jade Statue
+DIALOGUE
+[Touch the Ruby]
+[The ruby reveals to you magically that a Fire Soul of the level 80 will present it's self to you]
+DIALOGUE
+[Touch the Gold] 
+[The gold gives you a sparkling aura for a while, but fades]
+DIALOGUE
+[Touch the Jade]
+[The jade gives you visions of a Dragon City, one at the other side of the Dark Ones Portal."
+ENEMY
+Weak Fire Soul
+60
+DROP
+Flame Sword
+0.02
+DROP
+Fire Shield
+0.02
+DROP
+Ring of Flames
+0.02
+DROP
+Essence of Fire
+0.02
+ENEMY
+Fire Soul
+70
+DROP
+Flame Sword
+0.04
+DROP
+Fire Shield
+0.04
+DROP
+Ring of Flames
+0.04
+DROP
+Essence of Fire
+0.04
+ENEMY
+Fire Soul
+70
+DROP
+Flame Sword
+0.04
+DROP
+Fire Shield
+0.04
+DROP
+Ring of Flames
+0.04
+DROP
+Essence of Fire
+0.04
+ENEMY
+Fire Soul
+70
+DROP
+Flame Sword
+0.04
+DROP
+Fire Shield
+0.04
+DROP
+Ring of Flames
+0.04
+DROP
+Essence of Fire
+0.04
+ENEMY
+Fire Soul
+70
+DROP
+Flame Sword
+0.04
+DROP
+Fire Shield
+0.04
+DROP
+Ring of Flames
+0.04
+DROP
+Essence of Fire
+0.04
+ENEMY
+Invisioned Fire Soul
+80
+DROP
+Flame Sword
+0.08
+DROP
+Fire Shield
+0.08
+DROP
+Ring of Flames
+0.08
+DROP
+Essence of Fire
+0.08
+ENEMY
+Legendary Fire Soul
+120
+DROP
+Flame Sword
+0.2
+DROP
+Fire Shield
+0.2
+DROP
+Ring of Flames
+0.2
+DROP
+Essence of Fire
+0.2
+LOCATION
+Modgnik

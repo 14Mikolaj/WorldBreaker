@@ -1,0 +1,48 @@
+50
+NPC
+The General
+DIALOGUE
+Ask about war.
+"We've been outnumbered for a long time now, ever since the Wood Elves took their stance against us."
+DIALOGUE
+"Why are the wood elves the enemy?"
+"They must've been upset by the slimes in the north, our poachers also didn't help our relations."
+DIALOGUE
+"I'm here to kill you."
+"Haha, don't make me laugh: you won't stand a chance."
+NPC
+Lord of Eustus
+DIALOGUE
+"Why aren't you in Eustus o' mighty one?"
+"The war has become more troubleing than we thought, I'm here to know the details to relay to the members of my city."
+DIALOGUE
+"What's your actual name o' mighty one?"
+"O' Mighty One is sufficient for you to know."
+NPC
+Lord of Modgnik
+DIALOGUE
+"Lord, why are you out here and not in Modgnik?"
+"I'm here to know the details to relay to the members of my city."
+DIALOGUE
+"Lord, shouldn't you be accompanied by royal guards? This is a dangerous place to be in."
+"Now that you're here, I'm not too worried. Your reputation is quite admirable."
+DIALOGUE
+"What is your true name o' great one?"
+"Modgnik, I'm the founder of the city, and it's first and only ruler for now."
+ENEMY
+The General
+50
+DROP
+Gold Bag
+0.1
+DROP
+Generals Sword
+0.1
+DROP
+Imperial Boots
+0.1
+DROP
+Imperial Chestplate
+0.1
+LOCATION
+The Front

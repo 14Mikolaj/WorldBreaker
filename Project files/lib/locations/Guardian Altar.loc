@@ -1,0 +1,55 @@
+600
+NPC
+The "Grand Smith"
+DIALOGUE
+"You look tough."
+"Mhmmm. Okay."
+DIALOGUE
+"What do you do here?"
+"I smith for the Darkin and Sidvars."
+DIALOGUE
+"What are Sidvars?"
+"Skeletons from the underworld, infused with hollow energetic life, the Darkin corrupt them to give them 'Hope' and 'Want'"
+DIALOGUE
+"Are you the enemy then?"
+"Enemy or not, I don't intent to kill."
+DIALOGUE
+"You're responsible for the slaughter of thousands and plunging the world into chaos!"
+"You can say that..."
+DIALOGUE
+"Can you upgrade my stuff?"
+"Is it energetic? No: That means, I cannot."
+NPC
+Frail Drakii
+DIALOGUE
+"What are YOU?"
+"I am Drakii, the original Darkin."
+DIALOGUE
+"Are you the enemy?"
+"No, I'm Drakii, completely Isolated from your realm. I was dragged here and chained so I can't return, please imform my brothers."
+DIALOGUE
+"What's that big thing guarding the portal?"
+"You'd best just sneak by and avoid it. That colossal Guardian is completely unstoppable; It's made of infused and corrupted stone."
+ENEMY
+The Guardian
+600
+DROP
+The Guardians Collar
+0.1
+DROP
+Guardian Chains
+0.2
+DROP
+Guardian Shackles
+0.2
+DROP
+Flimsy Guardian Tunic
+0.1
+DROP
+Flimsy Guardian Cloth
+0.1
+DROP
+Orb of Creation
+0.02
+LOCATION
+Darkin Portal

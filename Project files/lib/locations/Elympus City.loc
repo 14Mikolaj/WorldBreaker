@@ -1,0 +1,39 @@
+62
+NPC
+Qeton the Trader
+DIALOGUE
+"What is this place?"
+"This? This is the greatest place amoongst all Immorta."
+DIALOGUE
+"What is Immorta."
+"Immorta are Darkin, Drakii and Angeli; Non-Mortals"
+NPC
+Tommy
+DIALOGUE
+"Tommy? Why are you here?"
+"I don't know. What is this place?
+DIALOGUE
+"How long have you been here?"
+"Wait, what is this place? Is this Eustus City?"
+DIALOGUE
+"Come with me Tom, let's get out of here!"
+"Nobody calls me Tom, nobody but me."
+ENEMY
+Darkin
+45
+ENEMY
+Darkin Gang
+60
+ENEMY
+Angeli
+65
+ENEMY
+Angeli Mega
+70
+ENEMY
+Super Darkin
+75
+LOCATION
+Darkin Realm
+LOCATION
+Angeli Realm

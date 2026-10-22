@@ -1,0 +1,37 @@
+78
+NPC
+Governor Mlakk
+DIALOGUE
+"Who are you?"
+"The Governor. I take care of the visitors from Elympus."
+DIALOGUE
+"What happens with me?"
+"You're free to walk around, although some may disagree. Don't start trouble mortal."
+DIALOGUE
+"What is there to do in this realm?"
+"Nothing for you, this is the birthing and praying place of the Angeli."
+ENEMY
+Angeli
+70
+ENEMY
+Mega Angeli
+73
+ENEMY
+Trained Local
+76
+ENEMY
+Frail Guard
+79
+ENEMY
+Godly Guard
+82
+ENEMY
+Swod Colossal
+85
+ENEMY
+Frail Freed Drakii
+88
+LOCATION
+Colossal Gateway
+LOCATION
+Elympus City

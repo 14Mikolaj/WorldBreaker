@@ -1,0 +1,106 @@
+22
+NPC
+Restless Ghoul
+DIALOGUE
+"What are you?"
+"You shouldn't be here!"
+DIALOGUE
+"What's in the fort?"
+"Nothing! LEAVE!"
+DIALOGUE
+Slay the Ghoul
+"I can't die, the force of the Darkin protect me, now I know your intentions mortal"
+ENEMY
+Darkin
+17
+DROP
+Brimstone Chest
+0.05
+DROP
+Brimstone Pauldrons
+0.05
+DROP
+Brimstone Legs
+0.05
+DROP
+Brimstone Amulet
+0.05
+DROP
+Darkeye
+0.1
+ENEMY
+Trained Darkin Guard
+19
+DROP
+Brimstone Chest
+0.06
+DROP
+Brimstone Pauldrons
+0.06
+DROP
+Brimstone Legs
+0.06
+DROP
+Brimstone Amulet
+0.06
+DROP
+Darkeye
+0.1
+ENEMY
+Darkin Talon
+23
+DROP
+Brimstone Chest
+0.07
+DROP
+Brimstone Pauldrons
+0.07
+DROP
+Brimstone Legs
+0.07
+DROP
+Brimstone Amulet
+0.07
+DROP
+Darkeye
+0.1
+ENEMY
+Darkin Bahemoth
+27
+DROP
+Brimstone Chest
+0.08
+DROP
+Brimstone Pauldrons
+0.08
+DROP
+Brimstone Legs
+0.08
+DROP
+Brimstone Amulet
+0.08
+DROP
+Darkeye
+0.2
+ENEMY
+Colossal Darkin Bahemoth
+31
+DROP
+Brimstone Chest
+0.1
+DROP
+Brimstone Pauldrons
+0.1
+DROP
+Brimstone Legs
+0.1
+DROP
+Brimstone Amulet
+0.1
+DROP
+Darkeye
+0.4
+LOCATION
+Draktharr
+LOCATION
+Darkin Portal

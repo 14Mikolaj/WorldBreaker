@@ -1,0 +1,29 @@
+               ???       ???
+                  \     /
+                   \   /
+                YsloviaCity
+                     |
+                Exnar'etne
+                     |
+              TheDragonstones     ColossalGateway
+                           \     /             \
+                            \   /            SecretPathway
+                         AngeliRealm             |
+                              |                  |
+            TheEmperor    ElympusCity      WoodElfFortress
+                     \   /                       |
+ GuardianAltar     DarkinRealm                   |
+            \       /                        YoliTemple
+             \     /                             |
+           DarkinPortal                          |
+                 |                           FinglarWoods
+             DarkinFort      LordHouse           |
+                 |              |                | 
+  TDG ------ Draktharr      ModgnikCity ----- TheFront -- Barracks
+                     \      /                    |
+                      \    /                 EustusCity
+                    BarkiForest                  |
+                        |                   TheHarbour
+                    AiomiForest                   \
+                        |                          \
+                    Noobsville - RookieTown       MushroomIsland

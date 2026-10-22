@@ -1,0 +1,24 @@
+Greater Slam
+15
+DAMAGE
+STR:10
+Patch Up
+10
+HEAL
+CON:14
+Spirit Slash
+12
+DAMAGE
+WIS:5
+Flames of Fury
+30
+BUFF
+STR:8
+Bulker Down
+45
+BUFF
+CON:16
+Recouperate
+0
+BUFF
+WIS:1

@@ -1,0 +1,118 @@
+5
+NPC
+Jimmy
+DIALOGUE
+"Who are you?"
+"I am Jimmy, a helpful dude."
+DIALOGUE
+"Why are you here?"
+"I am here to be helpful"
+DIALOGUE
+"What should I do?"
+"No"
+DIALOGUE
+"You remind me of Tommy"
+"Tommy? Oh him, yeh. He's not that interested in adventuring though."
+NPC
+Shady guy
+DIALOGUE
+[...]
+(He's still shady af)
+ENEMY
+Spider
+3
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Spider
+3
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Spider
+3
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Spider
+3
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Spider
+3
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Mega Rat
+5
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Mega Rat
+5
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Mega Rat
+5
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Yellow Slime
+4
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Yellow Slime
+4
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Yellow Slime
+4
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Yellow Slime
+4
+DROP
+Little Gnome Helper
+0.05
+ENEMY
+Big Boy
+20
+DROP
+Iron Chest
+0.5
+DROP
+Iron Helm
+0.5
+DROP
+Iron Gauntlets
+0.5
+DROP
+Iron Greaves
+0.5
+DROP
+Spirit of Iron
+0.5
+DROP
+Iron Sword
+0.5
+DROP
+Iron Shield
+0.5
+LOCATION
+Noobsville

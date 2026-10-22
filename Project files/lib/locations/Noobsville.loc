@@ -1,0 +1,76 @@
+2
+NPC
+Tommy
+DIALOGUE
+Who are you?
+I am Tommy, a helpful guy.
+DIALOGUE
+Why are you here?
+I am here to be helpful
+DIALOGUE
+What should I do?
+Go fight some monsters, nerd.
+NPC
+Pancake
+DIALOGUE
+Why is your name so funny?
+Because I just LOVE pancakes!
+DIALOGUE
+Do you like donuts?
+OF COURSE I DO!!!!!!!!
+NPC
+Teeto
+DIALOGUE
+Hey...
+Captain Teeto on duty!
+DIALOGUE
+What are you doing here?
+Hop, two, three, four!
+DIALOGUE
+Huh?
+That's gotta sting!
+DIALOGUE
+Where do we go next?
+I'll scout ahead!
+NPC
+Shady guy
+DIALOGUE
+[...]
+(This guy really doesn't want to talk)
+ENEMY
+Baby Spider
+1
+DROP
+Wooden Stick
+0.2
+DROP
+Rusty Ring
+0.1
+ENEMY
+Rabid Rat
+3
+DROP
+Plastic Amulet
+0.1
+DROP
+Stick Greaves
+0.1
+DROP
+Glass Gloves
+0.2
+ENEMY
+Small Slime
+2
+DROP
+Wooden Club
+0.1
+DROP
+Leaf Cover
+0.1
+DROP
+Slime Cap
+0.2
+LOCATION
+Aiomi Forest
+LOCATION
+Rookie Town

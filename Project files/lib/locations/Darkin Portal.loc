@@ -1,0 +1,48 @@
+33
+NPC
+Slime
+DIALOGUE
+[...]
+[...]
+ENEMY
+Portal Guard
+31
+DROP
+Portal Spear
+0.05
+DROP
+Brimstone Amulet
+0.05
+DROP
+Brimstone Legs
+0.05
+ENEMY
+Experienced Guard Hound
+33
+DROP
+Mega Plastic Amulet
+0.1
+DROP
+Bone Cage
+0.05
+ENEMY
+Corrupt Sidvars
+35
+DROP
+Sidvar Soul
+0.4
+DROP
+Corrupt Sidvar Soul
+0.1
+DROP
+Brimstone Pauldrons
+0.1
+DROP
+Brimstone Chest
+0.1
+LOCATION
+Darkin Fortress
+LOCATION
+Guardian Altar
+LOCATION
+Darkin Realm

@@ -1,0 +1,49 @@
+name: Windows build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2025
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Configure with MinGW-w64
+        run: cmake -S . -B build -G Ninja -DCMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=Debug
+      - name: Build
+        run: cmake --build build
+      - name: Check fresh character slots and exit
+        working-directory: build/game
+        shell: pwsh
+        run: |
+          $inputPath = Join-Path $env:RUNNER_TEMP 'worldbreaker-input.txt'
+          $outputPath = Join-Path $env:RUNNER_TEMP 'worldbreaker-output.txt'
+          $errorPath = Join-Path $env:RUNNER_TEMP 'worldbreaker-errors.txt'
+          "1`n4`n4`n" | Set-Content -Path $inputPath -Encoding ascii -NoNewline
+          $game = Start-Process -FilePath .\WorldBreaker.exe -NoNewWindow -PassThru `
+            -WorkingDirectory (Get-Location).Path -RedirectStandardInput $inputPath `
+            -RedirectStandardOutput $outputPath -RedirectStandardError $errorPath
+          if (-not $game.WaitForExit(10000)) {
+            $game.Kill()
+            throw 'The menu smoke test did not exit within 10 seconds.'
+          }
+          $game.WaitForExit()
+          $output = Get-Content -Path $outputPath -Raw
+          Write-Output $output
+          Get-Content -Path $errorPath
+          if ($game.ExitCode -ne 0) { throw "Game exited with code $($game.ExitCode)." }
+          if ($output -notmatch 'MAIN MENU' -or $output -notmatch 'CHARACTER SELECT') {
+            throw 'The expected menus were not displayed.'
+          }
+          if (($output | Select-String -Pattern 'NEW CHARACTER' -AllMatches).Matches.Count -ne 3) {
+            throw 'The game did not find three fresh character slots.'
+          }
+          if ($output -match 'OPEN ERROR') { throw 'A required game data file was missing.' }

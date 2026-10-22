@@ -1,0 +1,24 @@
+Mark Enemy
+8
+BUFF
+STR:3
+Minor Heal
+9
+HEAL
+WIS:10
+Power Attack
+10
+DAMAGE
+STR:8
+Focus Mind
+13
+BUFF
+WIS:3
+Conceal
+7
+BUFF
+AGI:3
+Aspect of Drakii
+60
+DAMAGE
+CON:26

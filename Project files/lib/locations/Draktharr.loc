@@ -1,0 +1,62 @@
+15
+NPC
+Zed
+DIALOGUE
+[Hand over the Duskblade of Draktharr...]
+My blade! Cheers, kid!
+DIALOGUE
+[Hand over the Youmuu's Ghostblade...]
+My other blade! Thanks a million, kid!
+DIALOGUE
+[Hand over the Umbral Spear...]
+That's not a blade.. tf i'm to do with this, kid?
+NPC
+Kayn
+DIALOGUE
+[The Darkin Scythe]
+AAAH HELP THERE'S A MONSTER IN MY SCYTHE AND IT'S TRYING TO KILL ME AAAH!!!
+ENEMY
+Darkin
+17
+DROP
+Crown of Darkin
+0.05
+DROP
+Duskblade of Draktharr
+0.1
+ENEMY
+Darkin
+17
+DROP
+Gloves of Magi
+0.1
+DROP
+Darkeye
+0.2
+DROP
+Darkeye
+0.1
+ENEMY
+Assasin
+15
+DROP
+Stealth Potion
+0.1
+DROP
+Stealth Potion
+0.05
+DROP
+Sneaky Gloves
+0.1
+ENEMY
+Floating dagger
+13
+DROP
+The Floating Dagger
+0.1
+LOCATION
+Barki Forest
+LOCATION
+Darkin Fortress
+LOCATION
+Trapped Darkin Giant

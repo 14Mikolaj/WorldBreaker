@@ -1,0 +1,69 @@
+NPC
+"The Three Stones"
+DIALOGE
+"I call upon thee..."
+"Thus we shall arise..."
+DIALOGUE
+"Who art thou?"
+"We are the Stones of the Drakii, and you don't need to talk like that."
+DIALOGUE
+"How are you talking to me?"
+"We are the Essence of our formidable selves trapped in stone as guradians for the Drakii Realm."
+NPC
+Stone of Dorthragon
+DIALOGUE
+"Who are you?"
+"Dorthragon, the all powerfull."
+DIALOGUE
+"Lend me your power, Dragon!"
+"Don't be foolish, you must speak to me in person for such raw strength."
+DIALOGUE
+"How are you defending Drakii Realm?"
+"We summon visions of ourselves, normally that's enough to stop people like you."
+NPC
+Stone of Ecliptus
+DIALOGUE
+"Who are you?"
+"Ecliptus, the all wise."
+DIALOGUE
+"Hand over your magic, Dragon!"
+"I'm still baffled by the people of Hesda Realm, ambitious as allways. No."
+NPC
+Stone of Narthhragar
+DIALOGUE
+"Who are you?"
+"Narthragar, the all evasive."
+DIALOGUE
+"Give me your speed, Dragon!"
+"You demand? No-nonono. You're speaking to Darth, the thief. I don't give, I take."
+ENEMY
+Half-Formed Dragon Vision
+125
+ENEMY
+Base Dragon Vision
+250
+ENEMY
+Weak Dragon Vision
+260
+ENEMY
+Dragon Vision
+275
+ENEMY
+Dragon Vision Super
+285
+ENEMY
+Mega Dragon Vision
+300
+ENEMY
+Reworked Dragon Vision 
+315
+ENEMY
+Tyrant Dragon Vision
+330
+ENEMY
+Colossal Dragon Vision
+350
+LOCATION
+Ecnar'etne
+LOCATION
+Angeli_Realm

@@ -1,0 +1,43 @@
+37
+NPC
+Informative Wood Elf
+DIALOGUE
+"Hello..."
+"You shouldn't be here, my kind has war against you humans."
+DIALOGUE
+"You should die."
+"You should leave."
+DIALOGUE
+[Stare Blankly]
+"I won't eat you, just don't harm us, there can still be peace... you're not listening."
+ENEMY
+Basic Wood Elf
+30
+ENEMY
+Skilled Wood Elf
+33
+ENEMY
+Mutated Wood Elf
+36
+ENEMY
+Strong Wood Elf
+38
+ENEMY
+Mega Wood Elf
+40
+ENEMY
+Armoured Wood Elf
+41
+ENEMY
+Armoured Wood Elf Tyrant
+42
+ENEMY
+Armoured Wood Elf Challanger
+43
+ENEMY
+Armoured Wood Elf Super
+44
+LOCATION
+The Front
+LOCATION
+Yoli Temple

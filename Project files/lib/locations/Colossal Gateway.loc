@@ -1,0 +1,46 @@
+110
+NPC
+Helpful Jimmy
+DIALOGUE
+"What is this place?"
+"The Colossal Gateway! This area's mysterious energy causes sudden erruption into colossal power!"
+DIALOGUE
+"Is this area the cause of colossals on Hesda?"
+"Absolutely!"
+DIALOGUE
+"What are you doing here?"
+"Adventuring, like you. However I'm here to find the hidden Yoli temple, that's where the Jade Colossal lies."
+DIALOGUE
+"Why aren't we becoming colossal?"
+"I don't know, I guess we most be native to here to fully absorb the areas powers."
+DIALOGUE
+"What is the strongest enemy in this universe?"
+"The Emperor! No one could ever best him."
+ENEMY
+Colossal Mega Slime
+90
+ENEMY
+Colossal Wolf
+96
+ENEMY
+Colossal Treant
+101
+ENEMY
+Colossal Tyrant
+105
+ENEMY
+Colossal Native Elf
+108
+ENEMY
+Colossal Giant
+110
+ENEMY
+Colossal Mega Giant
+111
+ENEMY
+Colossal Jimmy
+130
+LOCATION
+Angeli Realm
+LOCATION
+Secret Pathway

@@ -1,0 +1,36 @@
+29
+NPC
+Tovric the Trader
+DIALOGUE
+Ask about Eustus
+"This place has been corrupt with crime. Not enough people to take care of it.
+DIALOGUE
+"What is there to do?"
+"You can check out shops and help take care of bad guys around the city."
+DIALOGUE
+Ask about the state of enforcement
+"It's limited friend, we had to send out countless troops to The Front to fight off the Wood Elves"
+NPC
+Nopi the Blacksmith
+DIALOGUE
+"What're you smithing?"
+"Nothing at the moment, just finished a Arthmite Sword for the thousandth time."
+DIALOGUE
+"Why do you make so many swords?"
+"Why're you asking? If you think I'm supplying a millitia then you'd be wrong. The city is asking for more weapons than ever."
+ENEMY
+Greedy Thief
+26
+ENEMY
+Experienced Hitman
+28
+ENEMY
+Professional Arsonist
+30
+ENEMY
+Gang of Thugs
+33
+LOCATION
+The Front
+LOCATION
+The Harbour

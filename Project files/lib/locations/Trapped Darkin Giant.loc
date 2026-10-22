@@ -1,0 +1,31 @@
+1
+NPC
+Trapped Mega Colossal Darkin Golemic Giant
+DIALOGUE
+"How did you end up like this?"
+"My fellows abandoned me..."
+DIALOGUE
+"What would you do if I went in there?"
+"Hug you <3 "
+DIALOGUE
+"I want to slay you for XP"
+"You can't, I accidently ate the key, and it enfused in me. I can't get out of this Runerock Cage"
+NPC
+Tovrik the Trader
+DIALOGUE
+"What are you doing here?"
+"The giant brings intrest and is good for revenue."
+DIALOGUE
+"Does it speak?"
+"Yah, it's quite talkative."
+DIALOGUE
+"Any idea of how to get in?"
+"Are you mad!? That thing'll kill you as soon as you touch it!"
+ENEMY
+Some Bug
+1
+DROP
+Key of the Colossal
+0.01
+LOCATION
+Draktharr

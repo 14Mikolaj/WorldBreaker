@@ -1,0 +1,101 @@
+16
+NPC
+Tovric the Trader
+DIALOGUE
+Ask about Modgnik
+"This is the second biggest city in all of Hesda."
+DIALOGUE
+"What is there to do?"
+"You can check out shops and help take care of bad guys around the city."
+DIALOGUE
+Ask about the state of enforcement
+"It's limited friend, we had to send out countless troops to Draktharr to repel the Dark Ones"
+NPC
+Tommy
+DIALOGUE
+"How are you?"
+"Helpdul as always bro."
+DIALOGUE
+"Why are you in Modgnik?"
+"Why... Why are YOU in Modgnik?"
+DIALOGUE
+"Can you be helpful just once?"
+"Sure... Umm. Ok, just watch out when finding enemies in the City, some are ruthless."
+ENEMY
+Thief
+10
+DROP
+Bandit Robes
+0.1
+DROP
+Evil Hood
+0.1
+DROP
+Sneaky Gloves
+0.1
+ENEMY
+Hitman
+14
+DROP
+Sneaky Gloves
+0.1
+DROP
+Evil Pants
+0.1
+DROP
+Essence of Thievery
+0.1
+ENEMY
+Arsonist
+17
+DROP
+Essence of Thievery
+0.1
+DROP
+Stealth Potion
+0.1
+DROP
+Crowbar
+0.1
+ENEMY
+Mega Thug
+19
+DROP
+Crowbar
+0.1
+DROP
+Lockpick
+0.1
+DROP
+Molotov
+0.1
+ENEMY
+Thug Super
+19
+DROP
+Stolen Sword
+0.1
+Drop
+Bandit Robes
+0.1
+Drop
+Evil Hood
+0.1
+Drop
+Sneaky Gloves
+0.1
+Drop
+Evil Pants
+0.1
+Drop
+Essence of Thievery
+0.1
+Drop
+Stealth Potion
+0.1
+LOCATION
+Barki Forest
+LOCATION
+The Front
+LOCATION
+Lord House

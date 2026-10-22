@@ -1,0 +1,37 @@
+290
+NPC
+'The Mist'
+DIALOGUE
+[...]
+(You gain vision of a powerful level 400 entity in this room)
+DIALOGUE
+{...}
+(You gain vision of a beam from the Jade statue at the Lord House)
+DIALOGUE
+(...)
+(You discover the utter weakness found in the Temple, and how there is only one strong enemy"
+ENEMY
+Falling Rock
+1
+ENEMY
+Crumbling Pillar
+3
+ENEMY
+Squishy bug
+2
+ENEMY
+Venomous Bug
+8
+ENEMY
+Roaring Torch
+5
+ENEMY
+Vision of a Lime Entity
+40
+ENEMY
+Jade Colossal
+400
+LOCATION
+Wood_Elf Fortress
+LOCATION
+Finglar Woods

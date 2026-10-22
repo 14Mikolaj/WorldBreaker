@@ -1,0 +1,25 @@
+32
+NPC
+Fisherman Sam
+DIALOGUE
+"What's on the other side of the sea?"
+"The Mushroom Island, it's then quite close to Shrum'lvar, land of the shroom people."
+DIALOGUE
+"How much is a ride?"
+"Nothing! The Lord permitted anyone to go explore Shroom Island! We hope to land a trade deal with Shrooms."
+ENEMY
+Sinking Pier
+1
+ENEMY
+Angry Captain
+30
+ENEMY
+Angry Crew
+33
+ENEMY
+Super Angry Mercenary
+36
+LOCATION
+Eustus
+LOCATION
+Mushroom Island

@@ -1,0 +1,113 @@
+8
+NPC
+Jelok the Hunter
+DIALOGUE
+"What's to hunt?"
+"Almost Nothing, the slimes have been absorbing the wildlife here, to the point where some mutated."
+DIALOGUE
+"How are you going to deal with this?"
+"I can't, I'll need everyone's help, even yours."
+NPC
+Antus the Guard
+DIALOGUE
+"What're you doing here?"
+"Drinking. There's no Tavern in Aiomi, Barki's close."
+DIALOGUE
+Ask about thumping noise
+"That? That's the Treant Collosi, they go here time to time. You see one; You run"
+ENEMY
+Wood Elf
+6
+DROP
+Long Bow
+0.1
+DROP
+Short Bow
+0.1
+ENEMY
+Small Slime
+7
+DROP
+Iron Chest
+0.05
+DROP
+Iron Helm
+0.05
+DROP
+Iron Gauntlets
+0.05
+DROP
+Iron Greaves
+0.05
+DROP
+Spirit of Iron
+0.05
+DROP
+Iron Sword
+0.05
+DROP
+Iron Shield
+0.05
+ENEMY
+Large Slime
+8
+DROP
+Iron Chest
+0.06
+DROP
+Iron Helm
+0.06
+DROP
+Iron Gauntlets
+0.06
+DROP
+Iron Greaves
+0.06
+DROP
+Spirit of Iron
+0.06
+DROP
+Iron Sword
+0.06
+DROP
+Iron Shield
+0.06
+ENEMY
+Mutated Slime
+9
+DROP
+Iron Chest
+0.07
+DROP
+Iron Helm
+0.07
+DROP
+Iron Gauntlets
+0.07
+DROP
+Iron Greaves
+0.07
+DROP
+Spirit of Iron
+0.07
+DROP
+Iron Sword
+0.07
+DROP
+Iron Shield
+0.07
+ENEMY
+Experienced Treant Colossus
+11
+DROP
+Sharp Ring
+0.2
+DROP
+Wooden Necklace
+0.2
+LOCATION
+Aiomi Forest
+LOCATION
+Draktharr
+LOCATION
+Modgnik

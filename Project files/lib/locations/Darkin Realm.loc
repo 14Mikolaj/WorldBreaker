@@ -1,0 +1,133 @@
+44
+NPC
+Governor Ilakk
+DIALOGUE
+"Who are you?"
+"The Governor. I take care of those who enter through the portal."
+DIALOGUE
+"What happens with me?"
+"You're free to walk around, although some may disagree. Don't start trouble mortal."
+DIALOGUE
+"Why can't I go back?"
+"The portal only accepts immortals."
+DIALOGUE
+"How did I go through the portal?"
+"We designed it to bring slaves here, the no-back feature was to stop escapees. You're one of many exceptions."
+ENEMY
+Weak Civillian Darkin
+36
+DROP
+Blue Rune
+0.05
+DROP
+Red Rune
+0.05
+DROP
+Purple Rune
+0.05
+DROP
+Orange Rune
+0.05
+ENEMY
+Darkin Thug
+40
+DROP
+Runic Sword
+0.1
+DROP
+Runic Shield
+0.1
+DROP
+Blue Rune
+0.05
+DROP
+Red Rune
+0.05
+DROP
+Purple Rune
+0.05
+DROP
+Orange Rune
+0.05
+ENEMY
+Annoyed Arsonist
+44
+DROP
+Blue Rune
+0.05
+DROP
+Red Rune
+0.05
+DROP
+Purple Rune
+0.05
+DROP
+Orange Rune
+0.05
+ENEMY
+Spectral Specialist
+48
+DROP
+Runic Sword
+0.1
+DROP
+Runic Shield
+0.1
+DROP
+Runic Chestplate
+0.1
+DROP
+Runic Greaves
+0.1
+DROP
+Blue Rune
+0.05
+DROP
+Red Rune
+0.05
+DROP
+Purple Rune
+0.05
+DROP
+Orange Rune
+0.05
+ENEMY
+Heroic Hitman
+52
+DROP
+Runic Sword
+0.1
+DROP
+Runic Shield
+0.1
+DROP
+Runic Chestplate
+0.1
+DROP
+Runic Greaves
+0.1
+DROP
+Runic Gauntlets
+0.1
+DROP
+Runic Gloves
+0.1
+DROP
+Runic Helmet
+0.1
+DROP
+Blue Rune
+0.05
+DROP
+Red Rune
+0.05
+DROP
+Purple Rune
+0.05
+DROP
+Orange Rune
+0.05
+LOCATION
+The Emperor
+LOCATION
+Elympus City

@@ -1,0 +1,76 @@
+4
+NPC
+Antus the Guard
+DIALOGUE
+Ask for help about enemies.
+"You should stick to killing wolves, treants and such are very hard to kill."
+DIALOGUE
+"Who are you?"
+"I used to be a fellow adventurer like you, then I took an arrow in the knee. I'm a guard now, you can see from this yellow uniform."
+DIALOGUE
+Ask for help about areas.
+"Stray far away from Draktharr, the area got completely overrun with the 'Dark Ones'!"
+NPC
+Aya the Taskmaster
+DIALOGUE
+"Any problems with the villiage?"
+"Yes, the wood elves stole the Chieftains Amulet!"
+DIALOGUE
+"How can I help?"
+"Get rid of all the wolves in the forest: they've been killing our deer and ruining the land"
+DIALOGUE
+[...]
+"What are you looking at?"
+NPC
+Yoummu
+DIALOGUE
+"Your blade is gone!"
+"What! How could this Happen?"
+NPC
+Jelok the Hunter
+DIALOGUE
+"Hello"
+"You a Hunter too? You don't look it."
+ENEMY
+Strong Wolf
+3
+DROP
+Game Cover
+0.1
+DROP
+Hide Helm
+0.1
+ENEMY
+Wood Elf
+4
+DROP
+Leather Gloves
+0.1
+DROP
+Tribal Pants
+0.1
+DROP
+Long Bow
+0.1
+ENEMY
+Weak Treant
+4
+DROP
+Short Bow
+0.1
+DROP
+Wooden Necklace
+0.1
+ENEMY
+Treant
+5
+DROP
+Wooden Necklace
+0.2
+DROP
+Sharp Ring
+0.1
+LOCATION
+Noobsville
+LOCATION
+Barki Forest

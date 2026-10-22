@@ -1,0 +1,85 @@
+23
+NPC
+Jelok the Hunter
+DIALOGUE
+"What're you hunting?"
+"Heads, Idiot."
+DIALOGUE
+"Whose side are you on?"
+"Neither, a merchant offered me 800 gold peices for everyone I kill, said his cousin Bob runs a funeral company."
+NPC
+Brave Soldier
+DIALOGUE
+"How can I help?"
+"Kill the elves, Kill the Darkin, kill them all."
+DIALOGUE
+Ask about the situation
+"We're getting destroyed, non stop barrages everywhere. Is there a god?"
+ENEMY
+Elf Leigonnary
+18
+DROP
+Gold Bag
+0.08
+DROP
+Recurve Bow
+0.1
+DROP
+Elven Chestplate
+0.1
+ENEMY
+Trained Hound
+21
+DROP
+Gold Bag
+0.1
+ENEMY
+Poisoned Soldier
+24
+DROP
+Poison
+0.1
+DROP
+Poison
+0.1
+DROP
+Imperial Helm
+0.1
+DROP
+Hat of Mages
+0.1
+ENEMY
+Darkin Painlord
+25
+DROP
+Gold Bag
+0.1
+DROP
+Brutal Mace
+0.1
+DROP
+Imperial Helm
+0.1
+DROP
+Hat of Mages
+0.1
+ENEMY
+Elven Comandant
+26
+DROP
+Elven Chestplate
+0.1
+DROP
+Recurve Bow
+0.1
+DROP
+Gold Bag
+0.1
+LOCATION
+Eustus
+LOCATION
+Modgnik
+LOCATION
+Barracks
+LOCATION
+Finglar Woods
