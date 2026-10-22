@@ -1,18 +1,17 @@
 #include "Menus.h"
+#include <cctype>
 
 char get_input() {
     string choice;
-    cin >> choice;
-    cin.clear();
-    system("CLS");
+    choice = Console::read_token();
+    Console::clear();
     return choice[0];
 }
 
 void Menus::invalid() {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(hConsole, 207);
+    Console::color(207);
     cout << "Invalid input\n\n";
-    SetConsoleTextAttribute(hConsole, 15);
+    Console::color(15);
     simple_text("");
 }
 
@@ -38,9 +37,8 @@ bool Menus::confirm_input(string input) {
     while (true) {
         cout << "You have chosen:\n\n" << input << "\n\nIs this correct?\n\n1-->Yes\n2-->No\n\n-->";
         string confirm;
-        cin >> confirm;
-        cin.clear();
-        system("CLS");
+        confirm = Console::read_token();
+        Console::clear();
         switch (confirm[0]) {
             case '1':
                 return true;
@@ -62,9 +60,8 @@ bool Menus::confirm_class(char class_choice) {
                 "+3 CON\n+2 STR\n+1 AGI\n\n And 1 extra skill point for your allocation\n\n"
                 "Does this feel right for you?\n\n"
                 "1-->Yes\n2-->No\n\n-->";
-                cin >> confirm;
-                cin.clear();
-                system("CLS");
+                confirm = Console::read_token();
+                Console::clear();
                 break;
             case '2':
                 cout << "Rogues specialize fast and deadly strikes, but they cannot take much themselves.\n"
@@ -72,9 +69,8 @@ bool Menus::confirm_class(char class_choice) {
                 "\n+3 AGI\n+2 WIS\n+1 STR\n\n And 1 extra skill point for your allocation\n\n"
                 "Does this feel right for you?\n\n"
                 "1-->Yes\n2-->No\n\n-->";
-                cin >> confirm;
-                cin.clear();
-                system("CLS");
+                confirm = Console::read_token();
+                Console::clear();
                 break;
             case '3':
                 cout << "Scholars are well rounded characters.\n"
@@ -82,9 +78,8 @@ bool Menus::confirm_class(char class_choice) {
                 "+2 WIS\n+2 AGI\n+2 CON\n\n And 1 extra skill point for your allocation\n\n"
                 "Does this feel right for you?\n\n"
                 "1-->Yes\n2-->No\n\n-->";
-                cin >> confirm;
-                cin.clear();
-                system("CLS");
+                confirm = Console::read_token();
+                Console::clear();
                 break;
             case '4':
                 cout << "Mages specialize using powerful spells to aid them in battle.\n"
@@ -92,9 +87,8 @@ bool Menus::confirm_class(char class_choice) {
                 "+4 WIS\n+1 CON\n+1 AGI\n\n And 1 extra skill point for your allocation\n\n"
                 "Does this feel right for you?\n\n"
                 "1-->Yes\n2-->No\n\n-->";
-                cin >> confirm;
-                cin.clear();
-                system("CLS");
+                confirm = Console::read_token();
+                Console::clear();
                 break;
         }
         switch (confirm[0]) {
@@ -110,8 +104,8 @@ bool Menus::confirm_class(char class_choice) {
 
 void Menus::simple_text(string text) {
     cout << text;
-    system("pause");
-    system("CLS");
+    Console::pause();
+    Console::clear();
 }
 
 char Menus::character_select(string title) {
@@ -124,16 +118,15 @@ char Menus::character_select(string title) {
 }
 
 vector<string> Menus::get_names(){
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     ifstream save_file;
     vector<string> names;
     for (int file_num = 1 ; file_num < 4; file_num++) {
         string filename = "lib/save/" + to_string(file_num) + "/player.sav";
         save_file.open(filename);
         if (!save_file)  {
-            SetConsoleTextAttribute(hConsole, 207);
+            Console::color(207);
             cout << "\n############\n#OPEN ERROR#\n############\n" << endl;
-            SetConsoleTextAttribute(hConsole, 15);
+            Console::color(15);
         }
         string line;
         getline(save_file, line);
@@ -169,9 +162,8 @@ string Menus::get_grave() {
 string Menus::new_character_name() {
     cout << "Looks like you need a name:\n\n-->";
     string name;
-    getline(cin >> ws, name);
-    cin.clear();
-    system("CLS");
+    name = Console::read_line();
+    Console::clear();
     if (confirm_input(name)) return name;
     else return "";
 }
@@ -180,9 +172,8 @@ string Menus::new_character_class() {
     cout << "What kind of play style suits you the best? (select class)\n\n"
     "1-->Bruiser\n2-->Rogue\n3-->Scholar\n4-->Mage\n\n-->";
     string choice;
-    cin >> choice;
-    cin.clear();
-    system("CLS");
+    choice = Console::read_token();
+    Console::clear();
     switch(choice[0]) {
         case '1':
             if (confirm_class('1')) return "Bruiser";
@@ -228,14 +219,13 @@ bool Menus::check_valid_string(char input[], int max_length) {
 }
 
 Menus::location_data Menus::load_location(string location_name) {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     ifstream location;
     string file_name = "lib/locations/" + location_name + ".loc";
     location.open(file_name);
     if (!location) {
-        SetConsoleTextAttribute(hConsole, 207);
+        Console::color(207);
         cout << "\n############\n#OPEN ERROR#\n############\n" << endl;
-        SetConsoleTextAttribute(hConsole, 15);
+        Console::color(15);
         location.close();
         location.open("lib/debug/debug_location.txt");
         location_name = "debug_location";
@@ -367,14 +357,17 @@ int Menus::skill_menu(Player &player) {
     if (choice == num_skills + 1) return 99;
     if (player.get_mp() < player.skills[choice-1].cost) {
         cout << "You don't have enough MP to use that!\n" << endl;
-        system("PAUSE");
-        system("CLS");
+        Console::pause();
+        Console::clear();
         return 99;
     }
     return choice - 1;
 }
 
 void Menus::create_character_skills(string class_name, string slot) {
+    for (char &letter : class_name) {
+        letter = static_cast<char>(tolower(static_cast<unsigned char>(letter)));
+    }
     ifstream default_skills;
     ofstream current_skills;
     vector<string> skill_contents;

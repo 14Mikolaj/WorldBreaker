@@ -5,7 +5,7 @@ Character::Character(){
     level = 1;
     str = con = agi = wis = 5;
     turn_timer = turn_length = 50;
-    set_hmp();
+    set_hmp(1);
     next_turn = false;
     is_dead = false;
     attack_words = {"offended", "attacked", "poked", "pinched", "slapped", "tickled", "eviscerated", "disintegrated", "body-slammed", "booped", "Teemo Q'd", "imploded", "exploded",
@@ -59,18 +59,17 @@ string create_bar(float percent) {
 }
 
 void Character::draw_bars() {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     cout << "Lv " << level << "\t" << name << endl;
     cout << "HP:\t" << hp << "/" << hp_max << endl;
     float hp_percent = ((float)hp / (float)hp_max);
-    SetConsoleTextAttribute(hConsole, 12);
+    Console::color(12);
     cout << create_bar(hp_percent) << endl;
-    SetConsoleTextAttribute(hConsole, 15);
+    Console::color(15);
     cout << "MP:\t" << mp << "/" << mp_max << endl;
     float mp_percent = ((float)mp / (float)mp_max);
-    SetConsoleTextAttribute(hConsole, 9);
+    Console::color(9);
     cout << create_bar(mp_percent) << endl << endl;
-    SetConsoleTextAttribute(hConsole, 15);
+    Console::color(15);
 }
 
 void Character::wait() {

@@ -5,7 +5,7 @@
 #include <fstream>
 #include <math.h>
 #include <vector>
-#include <windows.h>
+#include "Console.h"
 
 using namespace std;
 

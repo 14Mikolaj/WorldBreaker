@@ -8,6 +8,9 @@
 # Compiled output and CMake build trees
 /build*/
 /cmake-build-*/
+/dist/
+__pycache__/
+*.pyc
 bin/
 binf/
 obj/

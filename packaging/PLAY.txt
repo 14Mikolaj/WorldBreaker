@@ -1,0 +1,23 @@
+WORLD BREAKER - the 2020 university RPG
+
+Extract the entire archive into a folder you can write to. Keep the executable,
+launcher, and lib folder together. No compiler or installation is needed.
+
+Windows x64: Double-click play.bat.
+Linux x64: Open a terminal in the extracted folder and run ./play.sh.
+The Linux download requires glibc 2.35 or newer (Ubuntu 22.04 or newer, or a
+compatible distribution). Musl-only systems such as Alpine are not supported.
+The launcher changes into the game folder so the game can find its data.
+
+Enter a menu number, then press Enter. Choose Start Game, select one of the
+three empty slots, and create a character. Explore, talk, travel, and fight.
+Use the game's Save option before leaving a session.
+
+Saves live in lib/save inside this folder. Back up that directory before
+replacing or deleting the game. Every release archive starts with empty slots.
+
+This is a preserved student project with known bugs and unfinished content.
+See README.md for details. Original 2020 charm included.
+
+Source and issues: https://github.com/14Mikolaj/WorldBreaker
+License: MIT (see LICENSE).

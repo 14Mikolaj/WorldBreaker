@@ -41,8 +41,8 @@ void Enemy::get_stats() {
     std::cout << name << endl << level << endl << str <<
      endl << con << endl << agi << endl << wis << endl <<
      hp << endl << hp_max << endl << mp << endl << mp_max << endl;
-    system("pause");
-    system("CLS");
+    Console::pause();
+    Console::clear();
 }
 
 void Enemy::take_damage(int damage, Player &player) {

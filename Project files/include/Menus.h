@@ -7,7 +7,6 @@
 #include "Player.h"
 #include <vector>
 #include <algorithm>
-#include <dirent.h>
 #include <stdio.h>
 
 class Player;

@@ -1,4 +1,4 @@
-name: Windows build
+name: Build and test
 
 on:
   push:
@@ -10,43 +10,54 @@ permissions:
 
 jobs:
   build:
-    runs-on: windows-2025
-    timeout-minutes: 10
+    name: ${{ matrix.platform }} (${{ matrix.build_type }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
     strategy:
+      fail-fast: false
       matrix:
-        build_type: [Debug, Release]
+        include:
+          - os: windows-2025
+            platform: windows-x64
+            extension: zip
+            build_type: Debug
+          - os: windows-2025
+            platform: windows-x64
+            extension: zip
+            build_type: Release
+          - os: ubuntu-22.04
+            platform: linux-x64
+            extension: tar.gz
+            build_type: Debug
+          - os: ubuntu-22.04
+            platform: linux-x64
+            extension: tar.gz
+            build_type: Release
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
-      - name: Configure with MinGW-w64
+      - name: Configure
         run: cmake -S . -B build -G Ninja -DCMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
       - name: Build
-        run: cmake --build build
-      - name: Check fresh character slots and exit
-        working-directory: build/game
-        shell: pwsh
-        run: |
-          $inputPath = Join-Path $env:RUNNER_TEMP 'worldbreaker-input.txt'
-          $outputPath = Join-Path $env:RUNNER_TEMP 'worldbreaker-output.txt'
-          $errorPath = Join-Path $env:RUNNER_TEMP 'worldbreaker-errors.txt'
-          "1`n4`n4`n" | Set-Content -Path $inputPath -Encoding ascii -NoNewline
-          $game = Start-Process -FilePath .\WorldBreaker.exe -NoNewWindow -PassThru `
-            -WorkingDirectory (Get-Location).Path -RedirectStandardInput $inputPath `
-            -RedirectStandardOutput $outputPath -RedirectStandardError $errorPath
-          if (-not $game.WaitForExit(10000)) {
-            $game.Kill()
-            throw 'The menu smoke test did not exit within 10 seconds.'
-          }
-          $game.WaitForExit()
-          $output = Get-Content -Path $outputPath -Raw
-          Write-Output $output
-          Get-Content -Path $errorPath
-          if ($game.ExitCode -ne 0) { throw "Game exited with code $($game.ExitCode)." }
-          if ($output -notmatch 'MAIN MENU' -or $output -notmatch 'CHARACTER SELECT') {
-            throw 'The expected menus were not displayed.'
-          }
-          if (($output | Select-String -Pattern 'NEW CHARACTER' -AllMatches).Matches.Count -ne 3) {
-            throw 'The game did not find three fresh character slots.'
-          }
-          if ($output -match 'OPEN ERROR') { throw 'A required game data file was missing.' }
+        run: cmake --build build --parallel 2
+      - name: Test gameplay and saves
+        run: ctest --test-dir build --output-on-failure
+      - name: Package release
+        if: matrix.build_type == 'Release'
+        run: python scripts/package_release.py --game-dir build/game --platform ${{ matrix.platform }} --version 1.0.0 --output-dir dist
+      - name: Test packaged game and launcher
+        if: matrix.build_type == 'Release'
+        run: python tests/smoke_test.py --archive dist/WorldBreaker-v1.0.0-${{ matrix.platform }}.${{ matrix.extension }}
+      - name: Upload release archive and checksum
+        if: matrix.build_type == 'Release'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: WorldBreaker-${{ matrix.platform }}
+          path: dist/*
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30

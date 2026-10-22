@@ -19,9 +19,6 @@ void menu(Player &player);
 void show_map();
 
 
-// global variables
-HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
 
 // start_menu --> select_character --> load_character --> menu,
 // menu --> investigate --> explore --> trigger fight --> fight
@@ -74,7 +71,6 @@ void fight(Player &player, Enemy &enemy) {
             case '4':  // escape
                 enemy.attack(player, enemy);  // enemy always attacks the player before they escape
                 player.reset_timer();  // reset the player timer, ready for next battle.
-                enemy.~Enemy();  // delete enemy from memory
                 player.clear_buffs();  // clear any buffs that are on the player (from skills)
                 if (player.is_dead) {
                     start_menu();  // go all the way back to start menu if player died
@@ -155,7 +151,7 @@ void view_inventory(Player &player) {
 // start_menu --> select_character --> load_character --> menu,
 // menu --> investigate --> investigate_self
 void investigate_self(Player &player) {
-    char choice;
+    char choice = '0';
     while (choice != '5') {
         // selection menu
         choice = simple_menu("SELF\n\n"
@@ -188,7 +184,7 @@ void investigate_self(Player &player) {
 // start_menu --> select_character --> load_character --> menu,
 // menu --> investigate
 void investigate(location_data &location, Player &player) {
-    char choice;
+    char choice = '0';
     while (choice != '3') {
         // selection menu
         choice = simple_menu("INVESTIGATE\n\n"
@@ -258,7 +254,7 @@ void talk_npc_diag_select(location_data &location, int selected_npc){
 // start_menu --> select_character --> load_character --> menu,
 // menu --> talk_npc_select
 void talk_npc_select(location_data &location) {
-    int selected_npc;
+    int selected_npc = 0;
     while (selected_npc != 99) {  // it's impossible to return from this function, or to have 99 npcs, so 99 is default invalid value
         selected_npc = talk_npc_select_menu(location);  // create a menu of available npcs in the location and allow selection
         if (selected_npc != 99){
@@ -329,9 +325,9 @@ void load_character(string slot) {
     string file_name = "lib/save/" + slot + "/player.sav";
     save_file.open(file_name);  // open the required save file
     if (!save_file) {
-        SetConsoleTextAttribute(hConsole, 207);
+        Console::color(207);
         cout << "\n############\n#OPEN ERROR#\n############\n" << endl;  // show an error if file cannot be opened
-        SetConsoleTextAttribute(hConsole, 15);
+        Console::color(15);
     }
     string name;
     getline(save_file, name);  // read the first line of the save file, which is the player's name
@@ -341,8 +337,8 @@ void load_character(string slot) {
     }
     save_file.close();
     cout << "Loaded character " + slot << endl << endl;
-    system("pause");
-    system("CLS");
+    Console::pause();
+    Console::clear();
     menu(player);  // go into actual game menu after character has been loaded / created
 }
 
@@ -373,9 +369,9 @@ void character_selection() {
 void delete_char_select() {
     char choice = '0';
     while (choice != '1' && choice != '2' && choice != '3' && choice != '4') {
-        SetConsoleTextAttribute(hConsole, 207);  // changing the colour to white text on red background - "warning"
+        Console::color(207);  // changing the colour to white text on red background - "warning"
         cout << "DELETE CHARACTER";
-        SetConsoleTextAttribute(hConsole, 15);
+        Console::color(15);
         choice = character_select("");  // Menus::character_select displays names in each 3 slots
         vector<string> names = get_names();  // Menus::get_names reads the names in each slots, for validation
         switch (choice) {
@@ -398,7 +394,7 @@ void delete_char_select() {
 
 // start_menu --> options
 void options(){
-    char choice;
+    char choice = '0';
     while (choice != '2') {
         // create menu
         choice = simple_menu("OPTIONS\n\n"
@@ -430,7 +426,7 @@ void show_map() {
 
 // first game menu
 void start_menu() {
-    char choice;
+    char choice = '0';
     while (true) {  // program always within this menu, unless exit called (case '4')
         // create menu - returns first input character
         choice = simple_menu("MAIN MENU\n\n"
@@ -449,6 +445,7 @@ void start_menu() {
                 graveyard();  // view graveyard
                 break;
             case '4':
+                Console::reset();
                 exit(EXIT_SUCCESS);  // close game
             default:
                 invalid();  // invalid input
@@ -459,7 +456,18 @@ void start_menu() {
 // begin code
 int main() {
     srand(time(NULL));  // random seed based on time
-    SetConsoleTextAttribute(hConsole, 15);  // white text on black background
-    start_menu();  // start the game
+    Console::color(15);  // white text on black background
+    try {
+        start_menu();  // start the game
+    }
+    catch (const Console::EndOfInput &) {
+        // Closing stdin exits every menu cleanly, including character creation.
+    }
+    catch (const std::exception &error) {
+        Console::reset();
+        cerr << "World Breaker: " << error.what() << endl;
+        return 1;
+    }
+    Console::reset();
     return 0;
 }

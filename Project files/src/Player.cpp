@@ -87,7 +87,6 @@ void Player::load_character(string slot){
     load_skills();
     load_inventory();
     getline(save_file, load_equipment.head.name);
-    getline(save_file, load_equipment.head.name);
     getline(save_file, load_equipment.chest.name);
     getline(save_file, load_equipment.gloves.name);
     getline(save_file, load_equipment.legs.name);
@@ -363,8 +362,8 @@ void Player::get_stats() {
            "Location: %s\n\n\n",
            name.c_str(), level, class_.c_str(), exp, exp_next,
            hp, hp_max, mp, mp_max, str, con, agi, wis, location.c_str());
-           system("pause");
-           system("CLS");
+           Console::pause();
+           Console::clear();
 }
 
 string Player::get_location() {
@@ -372,20 +371,18 @@ string Player::get_location() {
 }
 
 void Player::distribute_sp(string level_text) {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     while (sp > 0) {
-    SetConsoleTextAttribute(hConsole, 14);
+    Console::color(14);
     cout << level_text;
-    SetConsoleTextAttribute(hConsole, 15);
+    Console::color(15);
         cout << "You have " << sp << " remaining to spend:\n\n"
                 "1-->STR +1\n"
                 "2-->CON +1\n"
                 "3-->AGI +1\n"
                 "4-->WIS +1\n\n-->";
         string input;
-        cin >> input;
-        cin.clear();
-        system("CLS");
+        input = Console::read_token();
+        Console::clear();
         char choice = input[0];
         switch (choice) {
             case '1':
@@ -495,8 +492,8 @@ void Player::show_skills() {
         }
         cout << nametext << this_skill.cost << "\t" << this_skill.effect << "\t" << this_skill.amount << endl;
     }
-    system("PAUSE");
-    system("CLS");
+    Console::pause();
+    Console::clear();
 }
 
 int Player::get_mp() {
@@ -564,8 +561,8 @@ void Player::use_skill_damage(string stat, int amount, Enemy &enemy, Player &pla
         damage = agi * amount;
     }
     cout << " on the " << enemy.name << ".\n\nIt deals " << damage << " damage!\n\n";
-    system("PAUSE");
-    system("CLS");
+    Console::pause();
+    Console::clear();
     enemy.take_damage(damage, player);
 }
 
@@ -588,8 +585,8 @@ void Player::use_skill_heal(string stat, int amount) {
     }
     hp += heal;
     cout << " on yourself.\n\nIt heals you for " << heal << "HP!\n\n";
-    system("PAUSE");
-    system("CLS");
+    Console::pause();
+    Console::clear();
 }
 
 void Player::use_skill_buff(string stat, int amount) {
@@ -616,8 +613,8 @@ void Player::use_skill_buff(string stat, int amount) {
         cout << " on yourself.\n\nAGI increased by " << amount << "!\n\n";
     }
     update_stats();
-    system("PAUSE");
-    system("CLS");
+    Console::pause();
+    Console::clear();
 }
 
 void Player::show_equipment() {
@@ -631,15 +628,14 @@ void Player::show_equipment() {
     "Accessory 1: " << equipment.acc1.name << endl <<
     "Accessory 2: " << equipment.acc2.name << endl <<
     "Accessory 3: " << equipment.acc3.name << endl << endl;
-    system("PAUSE");
-    system("CLS");
+    Console::pause();
+    Console::clear();
 }
 
 void Player::recieve_item(string item_name) {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(hConsole, 10);
+    Console::color(10);
     cout << "Also received [" << item_name + "] !\n\n";
-    SetConsoleTextAttribute(hConsole, 15);
+    Console::color(15);
     Item found_item = find_item(item_name);
     inventory.push_back(found_item);
     format_equipment(found_item, false);
@@ -652,9 +648,10 @@ Item Player::find_item(string item_name) {
     string filename = "lib/items/item_list.il";
     itemfile.open(filename);
     string line;
-    do {
-        getline(itemfile, line);
-    } while (line != item_name);
+    while (getline(itemfile, line) && line != item_name) {}
+    if (!itemfile) {
+        throw runtime_error("Item not found in lib/items/item_list.il: " + item_name);
+    }
     lookup.name = line;
     itemfile >> lookup.level;
     itemfile >> lookup.slot;
@@ -672,16 +669,15 @@ int Player::get_inv_max_pages() {
 }
 
 void Player::show_inv(int page) {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     int start_index = 6 * page;
     int inv_size = inventory.size();
     for (int i = 0; i < 6; i++) {
         if ((i + start_index) > -1 && (i + start_index) < inv_size) {
             if (inventory[i+start_index].equipped) {
                 cout << i+1 << "-->" << inventory[i+start_index].name << " ";
-                SetConsoleTextAttribute(hConsole, 158);
+                Console::color(158);
                 cout  << "[E]" << endl;
-                SetConsoleTextAttribute(hConsole, 15);
+                Console::color(15);
             }
             else cout << i+1 << "-->" << inventory[i+start_index].name << endl;
         }
